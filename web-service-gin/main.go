@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -38,6 +40,8 @@ func postAlbums(c *gin.Context) {
 }
 
 func getAlbum(c *gin.Context) {
+	start := time.Now()
+	
 	id := c.Param("id")
 
 	if id == "" {
@@ -48,6 +52,7 @@ func getAlbum(c *gin.Context) {
 	for _, album := range albums {
 		if album.ID == id {
 			c.IndentedJSON(http.StatusOK, album)
+			fmt.Println("\nInternal handler duration:", time.Since(start))
 			return
 		}
 	}
@@ -56,6 +61,8 @@ func getAlbum(c *gin.Context) {
 }
 
 func main() {
+	gin.SetMode(gin.ReleaseMode)
+
 	router := gin.Default()
 
 	router.GET("/albums", getAlbums)
