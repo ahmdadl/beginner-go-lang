@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	// hosts := map[string]IPAddr{
 	// 	"loopback":  {127, 0, 0, 1},
@@ -11,6 +9,8 @@ func main() {
 	// 	fmt.Printf("%v: %v\n", name, ip)
 	// }
 
-	fmt.Println(Sqrt(2))
-	fmt.Println(Sqrt(-2))
+	// fmt.Println(Sqrt(2))
+	// fmt.Println(Sqrt(-2))
+
+	Gorotenses()
 }
