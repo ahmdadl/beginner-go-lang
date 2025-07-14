@@ -1,11 +1,5 @@
 package main
 
-import (
-	"fmt"
-
-	"golang.org/x/tour/tree"
-)
-
 func main() {
 	// hosts := map[string]IPAddr{
 	// 	"loopback":  {127, 0, 0, 1},
@@ -20,6 +14,9 @@ func main() {
 
 	// Gorotenses()
 
-	fmt.Println("Same(tree.New(1), tree.New(1)):", Same(tree.New(1), tree.New(1))) // true
-	fmt.Println("Same(tree.New(1), tree.New(2)):", Same(tree.New(1), tree.New(2))) // false
+	// fmt.Println("Same(tree.New(1), tree.New(1)):", Same(tree.New(1), tree.New(1))) // true
+	// fmt.Println("Same(tree.New(1), tree.New(2)):", Same(tree.New(1), tree.New(2))) // false
+
+	// GoWithoutMutex()
+	GoWithMutex()
 }
