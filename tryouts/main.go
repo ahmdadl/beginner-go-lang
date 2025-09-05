@@ -20,5 +20,7 @@ func main() {
 	// GoWithoutMutex()
 	// GoWithMutex()
 
-	GoCrawler()
+	// GoCrawler()
+
+	Examples()
 }
